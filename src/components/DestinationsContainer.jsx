@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import DestinationCollection from "./DestinationCollection";
 import DestinationDetails from "./DestinationDetails";
 
-export default function DestinationContainer() {
+export default function DestinationContainer({}) {
     const [destinations, setDestinations] = useState([])
 
     useEffect(() => {
