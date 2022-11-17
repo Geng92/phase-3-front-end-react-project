@@ -1,9 +1,9 @@
-import logo from './logo.svg';
+import logo from "./assets/testimg.png";
 import './App.css';
 import React from 'react';
-import TripsContainer from "./components/TripsContainer";
+//import TripsContainer from "./TripsContainer";
 import TravelersContainer from "./components/TravelersContainer";
-import DestinationsContainer from "./components/DestinationsContainer";
+//import DestinationsContainer from "./DestinationsContainer";
 
 function App() {
   
@@ -12,16 +12,14 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          <TravelersContainer />
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <p>
+          {/* <TripsContainer/> */}
+        </p>
+        <p>
+          {/* <DestinationsContainer/> */}
+        </p>
       </header>
     </div>
   );

@@ -6,19 +6,19 @@ export default function DestinationContainer({}) {
     const [destinations, setDestinations] = useState([])
 
     useEffect(() => {
-        fetch(API)
+        fetch("http://localhost:9292/destinations")
         .then((res) => res.json())
-        .then((destinations) => {
+        .then((destinationsData) => {
             console.log("destination container loaded successfully")
-            setDestinations(destinations);
+            setDestinations(destinationsData);
         });
     }, []);
 
 
     return(
     <div>
-        <DestinationCollection />
-        <DestinationDetails />
+        <DestinationCollection destinations={destinations}/>
+        <DestinationDetails destinations={destinations}/>
     </div>
     )    
 }

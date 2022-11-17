@@ -8,11 +8,11 @@ export default function TravelersContainer(){
     const [tripDetails, setTripDetails] = useState([])
 
     useEffect(() => {
-        fetch(API)
+        fetch("http://localhost:9292/trips")
         .then((res) => res.json())
-        .then((trips) => {
+        .then((tripsData) => {
             console.log("trips container loaded successfully")
-            setTrips(trips);
+            setTrips(tripsData);
         });
     }, []);
     
@@ -20,7 +20,7 @@ export default function TravelersContainer(){
     <div>
         <TripsCollection trips={trips}/>
         <TripDetails trips={tripDetails}/>
-        <TripForm />
+        {/* <TripForm /> */}
     </div>
     )
 }
