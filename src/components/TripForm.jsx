@@ -41,7 +41,7 @@ export default function TripForm ({onAddTrip}) {
                 type="text" 
                 id="date" 
                 name="date" 
-                value={date}
+                //value={date}
                 onChange={handleChange}
             />
 
@@ -49,7 +49,7 @@ export default function TripForm ({onAddTrip}) {
                 type="text" 
                 id="destination_id" 
                 name="destination" 
-                value={destination_id} 
+                //value={destination_id} 
                 onChange={handleChange}
             />
         </form>

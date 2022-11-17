@@ -2,7 +2,7 @@ import React from 'react';
 import Destination from './Destination';
 
 export default function DestinationCollection ({destinations}) {
-    if (!destinations) return <h3>Select a Destination!!!</h3>
+    if (!destinations) return <h3>Select and click on a Destination to learn more!!!</h3>
     
     const destinationsCards = destinations.map((destination) => {
         return (

@@ -1,9 +1,9 @@
 import logo from "./assets/testimg.png";
 import './App.css';
 import React from 'react';
-//import TripsContainer from "./TripsContainer";
+import TripsContainer from "./components/TripsContainer";
 import TravelersContainer from "./components/TravelersContainer";
-//import DestinationsContainer from "./DestinationsContainer";
+import DestinationsContainer from "./components/DestinationsContainer";
 
 function App() {
   
@@ -15,10 +15,10 @@ function App() {
           <TravelersContainer />
         </p>
         <p>
-          {/* <TripsContainer/> */}
+          <DestinationsContainer/>
         </p>
         <p>
-          {/* <DestinationsContainer/> */}
+          <TripsContainer/>
         </p>
       </header>
     </div>

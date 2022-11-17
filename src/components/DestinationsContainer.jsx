@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import DestinationCollection from "./DestinationCollection";
+import DestinationCollection from "./DestinationsCollection";
 import DestinationDetails from "./DestinationDetails";
 
 export default function DestinationContainer({}) {

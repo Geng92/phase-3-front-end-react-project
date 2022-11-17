@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import TripsCollection from './TripsCollection';
-import TripDetails from './TripsDetails';
+import TripDetails from './TripDetails';
+import TripForm from './TripForm';
 
 
 export default function TravelersContainer(){
