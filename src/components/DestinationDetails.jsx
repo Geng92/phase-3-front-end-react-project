@@ -2,6 +2,7 @@ import React from 'react';
 import Destination from './Destination';
 
 export default function DestinationCollection ({destinations}) {
+    if (!destinations) return <h3>Select a Destination!!!</h3>
     
     const destinationsCards = destinations.map((destination) => {
         return (
@@ -12,5 +13,10 @@ export default function DestinationCollection ({destinations}) {
         )
     })
     
-    return(<div>{destinationsCards}</div>)
+    return(
+    <div>
+        <h3>Destination</h3>
+        {destinationsCards}
+    </div>
+    )
 }

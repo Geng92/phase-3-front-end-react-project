@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Traveler ({ traveler }) {
+export default function Traveler ({ traveler, onClickTraveler }) {
 
     const { first_name, last_name, image } = traveler;
 

@@ -7,8 +7,14 @@ export default function TripsCollection ({trips}) {
         return (
             <Trip
             key={trip.id}
-            trip={trip}/>
+            trip={trip}
+            />
         )
     })
-    return(<div>{tripCards}</div>)
+    
+    return(
+    <div>
+        {tripCards}
+    </div>
+    )
 }
