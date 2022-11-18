@@ -21,7 +21,7 @@ export default function TravelerForm ({onAddTraveler}) {
           last_name: formData.last_name,
           image: formData.image,
         };
-        fetch("http://localhost:3001/travelers", {
+        fetch("http://localhost:9292/travelers", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(newTraveler),
@@ -64,7 +64,7 @@ export default function TravelerForm ({onAddTraveler}) {
                 value={formData.image} 
                 onChange={handleChange}
             />
-
+        <button type="submit">Add Yourself!</button>
         </form>
     </div>
     )

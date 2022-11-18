@@ -23,7 +23,7 @@ export default function DestinationForm ({onAddDestination}) {
           image: formData.image,
           population: formData.population
         };
-        fetch("http://localhost:3001/destinations", {
+        fetch("http://localhost:9292/destinations", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(newDestination),
@@ -76,6 +76,7 @@ export default function DestinationForm ({onAddDestination}) {
                 value={formData.population} 
                 onChange={handleChange}
             />
+            <button type="submit">Add A place</button>
         </form>
     </div>
     )

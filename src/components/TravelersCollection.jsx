@@ -6,7 +6,7 @@ export default function TravelersCollection ({ travelers }) {
     const travelersCards = travelers.map((traveler) => {
         return (
             <Traveler 
-              key = {traveler.id}
+              key={traveler.id}
               traveler={traveler}
             />
         )
