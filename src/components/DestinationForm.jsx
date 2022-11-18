@@ -43,7 +43,8 @@ export default function DestinationForm ({onAddDestination}) {
             <input 
                 type="text" 
                 id="location" 
-                name="location" 
+                name="location"
+                placeholder='Location' 
                 value={formData.location}
                 onChange={handleChange}
             />
@@ -52,6 +53,7 @@ export default function DestinationForm ({onAddDestination}) {
                 type="text" 
                 id="climate" 
                 name="climate" 
+                placeholder='Climate'
                 value={formData.climate} 
                 onChange={handleChange}
             />
@@ -60,6 +62,7 @@ export default function DestinationForm ({onAddDestination}) {
                 type="text" 
                 id="image" 
                 name="image" 
+                placeholder='Send us a great image!'
                 value={formData.image} 
                 onChange={handleChange}
             />
@@ -68,6 +71,8 @@ export default function DestinationForm ({onAddDestination}) {
                 type="number" 
                 id="population" 
                 name="population" 
+                placeholder="Population"
+                step="10000"
                 value={formData.population} 
                 onChange={handleChange}
             />

@@ -8,7 +8,7 @@ export default function Traveler ({ traveler, onClick }) {
         <div onClick={onClick}>
         <p>{first_name}</p>
             <p>{last_name}</p>
-            <p>{image}</p>
+            <img src={image} alt="traveler"/>
         </div>
     )
 }

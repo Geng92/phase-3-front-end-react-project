@@ -1,9 +1,10 @@
 import React, {useState, useEffect} from "react";
 import DestinationForm from "./DestinationForm";
-import DestinationCollection from "./DestinationsCollection";
+import DestinationsCollection from "./DestinationsCollection";
 
 export default function DestinationContainer() {
     const [destinations, setDestinations] = useState([])
+    const [searchQuery, setSearchQuery] = useState("")
     
 
     useEffect(() => {
@@ -18,11 +19,17 @@ export default function DestinationContainer() {
     const onAddDestination = (newDestination) => {
         setDestinations([...destinations, newDestination]);
     }
+
+    
+    const destinationsToDisplay = destinations.filter((destination) => 
+          destination.location.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+    
     
     return(
     <div>
-        <DestinationCollection destinations={destinations} />
         <DestinationForm onAddDestination={onAddDestination}/>
+        <DestinationsCollection destinations={destinationsToDisplay} searchQuery={searchQuery} setSearchQuery={setSearchQuery}/>
     </div>
     )    
 }

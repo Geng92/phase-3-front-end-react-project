@@ -6,9 +6,9 @@ export default function Destination ({ destination }) {
 
     return (
         <div>
+            <img src={image} />
             <p>{location}</p>
             <p>{climate}</p>
-            <p>{image}</p>
             <p>{population}</p>
         </div>
     )
