@@ -1,5 +1,4 @@
-import logo from "./assets/testimg.png";
-import './App.css';
+import './index.css';
 import React from 'react';
 import {Routes, Route} from 'react-router-dom';
 // import TripsContainer from "./components/TripsContainer";
@@ -12,7 +11,7 @@ import About from "./components/About";
 function App() {
   
   return (
-    <div className="App">
+    <div class="App">
         <Routes>
           <Route path="/" element={ <Home/>} />
           <Route path="about" element={ <About/> } />

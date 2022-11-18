@@ -18,6 +18,7 @@ export default function DestinationCollection ( { destinations, searchQuery, set
     return(
     <div>
         <h3>Destinations on Our Radar!</h3>
+        <div class="destinations">
         <input 
             type="text" 
             placeholder="take a look..." 
@@ -25,7 +26,8 @@ export default function DestinationCollection ( { destinations, searchQuery, set
             value={searchQuery} 
         />
         <p>Let us know which destination we should take a closer look at with the star!</p>
-        {destinationsCards}
+        </div>
+        <div class="trips">{destinationsCards}</div>
     </div>
     )
 }

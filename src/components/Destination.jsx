@@ -17,8 +17,8 @@ export default function Destination ({ destination, onVisitDestination }) {
       };
 
     return (
-        <div>
-            <img src={image} />
+        <div class = "destination_card">
+            <img class="image" src={image} alt="img"/>
             <p>{location}</p>
             <p>{climate}</p>
             <p>{population}</p>

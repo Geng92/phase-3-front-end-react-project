@@ -15,7 +15,8 @@ export default function TravelersCollection ({ travelers }) {
     return(
     <div>
         <h3>Travelers in our Caravan!</h3>
-        {travelersCards}
+        <div class="trips">{travelersCards}</div>
+        
     </div>
     )
 }
