@@ -1,11 +1,11 @@
 import React from "react";
 
-export default function Destination ({ destination, onClickDestination }) {
+export default function Destination ({ destination }) {
 
-    const { location, climate, image, population } = destination;
+    const { location, climate, image, population, visited } = destination;
 
     return (
-        <div onClick={onClickDestination}>
+        <div>
             <p>{location}</p>
             <p>{climate}</p>
             <p>{image}</p>

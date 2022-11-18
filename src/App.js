@@ -1,26 +1,24 @@
 import logo from "./assets/testimg.png";
 import './App.css';
 import React from 'react';
-import TripsContainer from "./components/TripsContainer";
-import TravelersContainer from "./components/TravelersContainer";
-import DestinationsContainer from "./components/DestinationsContainer";
+import {Routes, Route} from 'react-router-dom';
+// import TripsContainer from "./components/TripsContainer";
+// import TravelersContainer from "./components/TravelersContainer";
+// import DestinationsContainer from "./components/DestinationsContainer";
+import Caravan from "./components/Caravan";
+import Home from "./components/Home";
+import About from "./components/About";
 
 function App() {
   
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          <TravelersContainer />
-        </p>
-        <p>
-          <DestinationsContainer/>
-        </p>
-        <p>
-          <TripsContainer/>
-        </p>
-      </header>
+      <h3>display</h3>
+        <Routes>
+          <Route path="/" element={ <Home/>} />
+          <Route path="about" element={ <About/> } />
+          <Route path="caravan" element={ <Caravan/> } />
+        </Routes>
     </div>
   );
 }

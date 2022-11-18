@@ -1,10 +1,10 @@
 import React, {useState, useEffect} from "react";
+import DestinationForm from "./DestinationForm";
 import DestinationCollection from "./DestinationsCollection";
-import DestinationDetails from "./DestinationDetails";
 
-export default function DestinationContainer({}) {
+export default function DestinationContainer() {
     const [destinations, setDestinations] = useState([])
-    const [selectDestinationId, setSelectDestinationId] = useState(null)
+    
 
     useEffect(() => {
         fetch("http://localhost:9292/destinations")
@@ -15,12 +15,14 @@ export default function DestinationContainer({}) {
         });
     }, []);
 
-    const selectedDestination = destinations.find((destination) => destination.id === selectDestinationId);
+    const onAddDestination = (newDestination) => {
+        setDestinations([...destinations, newDestination]);
+    }
     
     return(
     <div>
-        <DestinationCollection destinations={destinations} onClickDestination={setSelectDestinationId}/>
-        <DestinationDetails destinations={selectedDestination}/>
+        <DestinationCollection destinations={destinations} />
+        <DestinationForm onAddDestination={onAddDestination}/>
     </div>
     )    
 }

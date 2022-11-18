@@ -1,13 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import TripsCollection from './TripsCollection';
-import TripDetails from './TripDetails';
-import TripForm from './TripForm';
-
 
 export default function TravelersContainer(){
     const [trips, setTrips] = useState([])
-    const [selectTripId, setSelectTripId] = useState(null)
-
+    
     useEffect(() => {
         fetch("http://localhost:9292/trips")
         .then((res) => res.json())
@@ -16,18 +12,10 @@ export default function TravelersContainer(){
             setTrips(tripsData);
         });
     }, []);
-    
-    const selectedTrip = trips.find((trip) => trip.id === selectTripId);
-
-    const onAddTrip = (newTrip) => {
-        setTrips([...trips, newTrip]);
-    }
 
     return(
     <div>
-        <TripsCollection trips={trips} onClickTrip={setSelectTripId}/>
-        <TripDetails trips={selectedTrip}/>
-        <TripForm onAddTrip={onAddTrip}/>
+        <TripsCollection trips={trips} />
     </div>
     )
 }

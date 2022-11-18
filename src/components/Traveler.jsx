@@ -1,12 +1,12 @@
 import React from "react";
 
-export default function Traveler ({ traveler, onClickTraveler }) {
+export default function Traveler ({ traveler, onClick }) {
 
     const { first_name, last_name, image } = traveler;
 
     return (
-        <div>
-            <p>{first_name}</p>
+        <div onClick={onClick}>
+        <p>{first_name}</p>
             <p>{last_name}</p>
             <p>{image}</p>
         </div>
