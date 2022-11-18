@@ -1,10 +1,6 @@
-import logo from "./assets/testimg.png";
-import './App.css';
+import './index.css';
 import React from 'react';
 import {Routes, Route} from 'react-router-dom';
-// import TripsContainer from "./components/TripsContainer";
-// import TravelersContainer from "./components/TravelersContainer";
-// import DestinationsContainer from "./components/DestinationsContainer";
 import Caravan from "./components/Caravan";
 import Home from "./components/Home";
 import About from "./components/About";

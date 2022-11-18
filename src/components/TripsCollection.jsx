@@ -15,7 +15,7 @@ export default function TripsCollection ({trips}) {
     return(
     <div>
         <h3>How Many trips our Caravan has been on!</h3>
-        {tripCards}
+        <div class="trips">{tripCards}</div>
     </div>
     )
 }

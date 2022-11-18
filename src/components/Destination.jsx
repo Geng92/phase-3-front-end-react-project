@@ -17,16 +17,16 @@ export default function Destination ({  destination, onVisitDestination }) {
     //   };
 
     return (
-        <div>
-            <img src={image} />
-            <p>{location}</p>
-            <p>{climate}</p>
-            <p>{population}</p>
-            {/* {visited ? (
-          <button onClick={handleVisitDestination} className="emoji-button favorite active">★</button>
-        ) : (
-          <button onClick={handleVisitDestination} className="emoji-button favorite">☆</button>
-        )} */}
-        </div>
+      <div class = "destination_card">
+      <img class="image" src={image} alt="img"/>
+      <p>{location}</p>
+      <p>{climate}</p>
+      <p>{population}</p>
+      {/* {visited ? (
+    <button onClick={handleVisitDestination} className="emoji-button favorite active">★</button>
+  ) : (
+    <button onClick={handleVisitDestination} className="emoji-button favorite">☆</button>
+  )} */}
+  </div>
     )
 }

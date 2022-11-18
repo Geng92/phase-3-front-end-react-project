@@ -8,11 +8,11 @@ export default function Trip ({ trip }) {
     const { date, traveler, destination } = trip;
 
     return (
-        <div>
-            <p>{date}</p>
-            <img src={image}/>
-            <p>{traveler.first_name} {traveler.last_name}</p>
-            <p>{destination.location}</p>
-        </div>
+    <div class="trip_div">
+        <p>{date}</p>
+        <img class="image" src={image} alt="img"/>
+        <p>Traveler: {traveler.first_name} {traveler.last_name}</p>
+        <p>Destination: {destination.location}</p>
+    </div>
     )
 }
