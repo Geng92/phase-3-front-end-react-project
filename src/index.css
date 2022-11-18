@@ -14,3 +14,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.emoji-button {
+  border: none;
+  background: none;
+  padding: 0 0.25rem;
+  cursor: pointer;
+}
+
+.emoji-button.favorite {
+  color: transparent;
+  text-shadow: 0 0 0 gray;
+}
+
+.emoji-button.favorite.active,
+.emoji-button.favorite:hover {
+  text-shadow: 0 0 0 gold;
+  cursor: pointer;
+}
